@@ -92,7 +92,7 @@ const Admin_Table = ({passenger}) => {
               let daysElapsed = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
               let daysRemaining = 'N/A';
-              if (daysElapsed >= 0 && daysElapsed <= 90) {
+              if (daysElapsed >= 0 && daysElapsed <= row?.mofa ? 90 : 60) {
                   daysRemaining = Math.max(90 - daysElapsed, 0);
               }
              
