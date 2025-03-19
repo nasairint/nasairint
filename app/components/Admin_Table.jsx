@@ -244,7 +244,7 @@ const Admin_Table = ({passenger}) => {
     ];
     useEffect(()=>{
         const result= passenger.filter((item)=>{
-         return item?.name?.toLowerCase().match(search.toLocaleLowerCase()) || item?.passport_no?.toLowerCase().match(search.toLocaleLowerCase()) || item?.agent?.toLowerCase().match(search.toLocaleLowerCase())
+         return item?.name?.toLowerCase().match(search.toLocaleLowerCase()) || item?.passport_no?.toLowerCase().match(search.toLocaleLowerCase()) || item?.agent?.toLowerCase().match(search.toLocaleLowerCase()) || item?.visa_no?.toLowerCase().match(search.toLocaleLowerCase())
         });
         setFilter(result);
     },[search]);
