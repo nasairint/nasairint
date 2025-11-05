@@ -148,6 +148,11 @@ const Admin_Table = ({passenger}) => {
             wrap:true,
         },
         {
+            name: <p className="font-bold text-lg">Agent</p>,
+            selector: row => row.agent ,
+            wrap:true,
+        },
+        {
             name: <p className="font-bold text-lg">Biometric Finger</p>,
             selector: row => <div className="min-w-[230px] flex gap-1 flex-col p-1"><h3 className="">{row?.bio_finger}</h3><p className={`${(row?.bio_status=="Processing")?"bg-red-600 text-md p-1 w-fit text-white rounded-lg":""}bg-green-700 text-md p-1 w-fit text-white rounded-lg`}>{row?.bio_status}</p></div>,
             wrap:true,
@@ -231,11 +236,7 @@ const Admin_Table = ({passenger}) => {
             minWidth:"100px",
             wrap:true,
         },
-        {
-            name: <p className="font-bold text-lg">Agent</p>,
-            selector: row => row.agent ,
-            wrap:true,
-        },
+        
         {
             name: <p className="font-bold text-lg">Status</p>,
             selector: row => row.status ,
